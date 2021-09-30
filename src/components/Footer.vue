@@ -1,7 +1,16 @@
 <template>
-  <section>
-    <p>Io sono il footer</p>
-  </section>
+  <footer>
+    <div class="backgroundFooter">
+      <div class="link">
+        <div class="academy"></div>
+        <div class="popular"></div>
+        <div class="support"></div>
+        <div class="learning"></div>
+
+      </div>
+
+    </div>
+  </footer>
     
 </template>
 
@@ -16,18 +25,34 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
+@import '../styles/variables';
+
+  .backgroundFooter {
+    width: 100%;
+    height: 500px;
+    background: $neroFooter;
+    display: flex;
+    align-items: center;
+  }
+
+  .link {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+  }
+
+  .academy,
+  .popular,
+  .support,
+  .learning {
+    width: 20%;
+    height: 100%;
+    background: chartreuse;
+    margin: 10px;
+    margin: 20px;
+  }
 </style>
