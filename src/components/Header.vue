@@ -77,6 +77,7 @@ export default {
 <style scoped lang="scss">
 
 @import '../styles/variables';
+@import '../styles/mixin';
 
   .backgroundHeader {
     position: relative;
