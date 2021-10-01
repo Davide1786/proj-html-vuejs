@@ -120,24 +120,22 @@ export default {
 <style scoped lang="scss">
 
 @import '../styles/variables';
+@import '../styles/mixin';
+
 
   .backgroundFooter {
     position: relative;
     width: 100%;
     height: 500px;
     background: $neroFooter;
-    display: flex;
-    align-items: center;
+    @include align-center();
   }
 
   .link {
-    width: 90%;
+    width: 95%;
     height: 300px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
+    @include display-flex();
     border-bottom: 1px solid $listFooter ;
   }
 
@@ -180,24 +178,18 @@ export default {
     height: 100px;
     display: flex;
     color: $listFooter;
-    // background: olive;
   }
 
   .copy {
     width: 50%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    // background: orange;
+    @include align-center();
   }
 
   .socials {
     width: 50%;
     height: 100%;
-    display: flex;
-    align-items: center;
-
-    // background: orangered;
+    @include align-center();
   }
 
 

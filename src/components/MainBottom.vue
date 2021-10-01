@@ -1,13 +1,13 @@
 <template>
   <section>
-    <p>Io sono il main</p>
+    <p>Io sono il bottom</p>
   </section>
     
 </template>
 
 <script>
 export default {
-  name: 'Main',
+  name: 'MainBottom',
   props: {
     msg: String
   }

@@ -97,20 +97,22 @@ export default {
 
   .headerTop {
     position: absolute;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 95%;
     height: 100px;
     display: flex;
     justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
     padding: 10px;
-    top: 0%;
-    left: 0%;
   }
 
   .logo {
-    width: 20%;
+    width: 200px;
     display: flex;
     align-items: center;
-    padding: 20px;
   }
 
   .logo > img {
