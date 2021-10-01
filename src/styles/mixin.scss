@@ -1,3 +1,5 @@
+// Impaginazione
+
 @mixin display-flex {
     display: flex;
     justify-content: center;
@@ -5,10 +7,47 @@
     justify-content: space-between;
 }
 
+@mixin column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin araund-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@mixin justify-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin align-center {
     display: flex;
     align-items: center;
 }
 
+@mixin cerchio {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
 
+// Font
+
+@mixin font22 {
+    font-size: 22px;
+}
+
+@mixin font25 {
+    font-size: 25px;
+}
+
+@mixin font50 {
+    font-size: 50px;
+}
 

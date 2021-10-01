@@ -107,6 +107,7 @@ p {
 .jumbotron {
   width: 95%;
   text-align: center;
+  margin: 0 auto;
 }
 
 .jumbotron > img {
