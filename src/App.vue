@@ -4,7 +4,8 @@
 
     <MainTop />
     <MainCenter />
-    <MainBottom />
+    <MainBottomTop />
+    <!-- <MainBottom /> -->
 
     <Footer />
   </div>
@@ -14,7 +15,8 @@
 import Header from './components/Header.vue'
 import MainTop from './components/MainTop.vue'
 import MainCenter from './components/MainCenter.vue'
-import MainBottom from './components/MainBottom.vue'
+import MainBottomTop from './components/MainBottomTop.vue'
+// import MainBottom from './components/MainBottom.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -23,7 +25,8 @@ export default {
     Header,
     MainTop,
     MainCenter,
-    MainBottom,
+    MainBottomTop,
+    // MainBottom,
     Footer
   }
 }

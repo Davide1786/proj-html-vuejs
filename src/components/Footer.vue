@@ -172,12 +172,14 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translate(5.5%, -0%);
-    width: 90%;
+    // transform: translate(5.5%, -0%);
+    transform: translate(3.5%, -0%);
+    width: 95%;
     margin: 0 auto;
     height: 100px;
     display: flex;
     color: $listFooter;
+    // background: red;
   }
 
   .copy {

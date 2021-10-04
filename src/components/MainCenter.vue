@@ -182,7 +182,8 @@ export default {
 
   .barra {
     padding-left: 30px; 
-    color: $lista; 
+    font-weight: bold;
+    color: $testiColonna; 
     @include font22();   
   }
   

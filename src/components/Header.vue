@@ -24,7 +24,9 @@
                 deleniti quasi laborum obcaecati blanditiis libero voluptatem error aut
                 repudiandae facilis architecto ex? Blanditiis?</p>
               <div class="register">
-                <div>Register Now</div>
+                <!-- <div> -->
+                  <p class="now">Register Now</p>
+                <!-- </div> -->
               </div>
           </div>
           <div class="headerBottom">
@@ -101,18 +103,14 @@ export default {
     transform: translate(-50%);
     width: 95%;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
     margin: 0px auto;
     padding: 10px;
+    @include display-flex();
   }
 
   .logo {
     width: 200px;
-    display: flex;
-    align-items: center;
+    @include align-center();
   }
 
   .logo > img {
@@ -121,9 +119,7 @@ export default {
 
   .navigazione {
     width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include justify-content();
   }
 
   ul, li {
@@ -157,18 +153,26 @@ export default {
   p {
     margin-bottom: 30px;
     color: $bianco;
+    @include font20();
   }
 
   .register {
-    width: 180px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $azzurro;
+    position: relative;
+    width: 200px;
+    height: 70px;
     margin: 0px auto;
     text-transform: uppercase;
+    background: $azzurro;
     color: $bianco;
+  }
+
+  .now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    @include font18();
   }
   
   .headerBottom {
@@ -176,20 +180,16 @@ export default {
     bottom: 0;
     width: 100%;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include justify-content();
   }
 
   .cerchio {
     width: 20px;
     height: 20px;
-    border: 2px solid $bianco;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid $bianco;
+    @include justify-content();
   }
  
   .pallino {

@@ -67,23 +67,25 @@ export default {
 .containerIcons {
   width: 95%;
   height: 300px;
-  @include display-flex();
   margin: 0 auto;
+  @include display-flex();
 }
 
 .icons {
-  min-width: calc(1200px / 6);
+  width: calc(1200px / 6);
+  margin: 3px;
   // width: calc(95% / 6);
   height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: $bacgroungIcons;
+  background: $backgroungIcons;
+  @include column();
 }
 
 h3 {
   margin-top: 15px;
+}
+
+h1 {
+  @include font50();
 }
 
 .testo {
@@ -93,8 +95,8 @@ h3 {
 
 p {
   margin-top: 25px;
-  font-size: 20px;
   color: $fontP;
+  @include font22();
 }
 
 .more {
@@ -102,6 +104,7 @@ p {
   margin-top: 25px;
   text-transform: uppercase;
   color: $azzurro;
+  @include font18();
 }
 
 .jumbotron {
@@ -116,9 +119,8 @@ p {
 
 .mondo {
   width: 95%;
-  display: flex;
-  justify-content: center;
   margin: 50px auto;
+  @include justify-center();
 }
 
 .mappamondo {
@@ -138,7 +140,7 @@ p {
 }
 
 .empowering {
-  font-size: 40px;
+  @include font50();
 }
 
 .lorem {
@@ -150,8 +152,9 @@ p {
 }
 
 .user, .event {
-  color: $azzurro;
   font-size: 60px;
+  font-weight: bold;
+  color: $azzurro;
 }
 
 .userText, .eventText {
