@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="subjects">
+      
       <div class="containerIcons">
         <div v-for="(icon, index) in icons" :key="index" class="icons">
           <img :src="require(`../img/${icon.img}`)" alt="">
@@ -15,24 +16,34 @@
     </div>
     <div class="jumbotron">
       <img src="../img/h5-img-1.jpg" alt="">
+      <div class="top">
+        <i class="fas fa-angle-up"></i>
+        top
+      </div>
     </div>
     <div class="mondo">
-      <div class="mappamondo">
-        <img src="../img/h5-img-2.jpg" alt="">  
+      <div class="top">
+        <i class="fas fa-angle-up"></i>
+        top
       </div>
-      <div class="textEmpowering">
-        <h1 class="empowering">
-          Empowering <br> Children to Reach <br> Their Potential
-        </h1>
-        <p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus, alias rerum expedita commodi illum consequuntur? Sapiente consectetur vitae repellendus facere dolorem mollitia suscipit quae ducimus, quasi ab veritatis officia!</p>
-        <div class="number">
-          <div>
-            <p class="user">168</p>
-            <p class="userText"> User Stories</p>
-          </div>
-          <div>
-            <p class="event">347</p>
-            <p class="eventText">Events</p>
+      <div class="w-90">
+        <div class="mappamondo">
+          <img src="../img/h5-img-2.jpg" alt="">  
+        </div>
+        <div class="textEmpowering">
+          <h1 class="empowering">
+            Empowering <br> Children to Reach <br> Their Potential
+          </h1>
+          <p class="lorem">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus, alias rerum expedita commodi illum consequuntur? Sapiente consectetur vitae repellendus facere dolorem mollitia suscipit quae ducimus, quasi ab veritatis officia!</p>
+          <div class="number">
+            <div>
+              <p class="user">168</p>
+              <p class="userText"> User Stories</p>
+            </div>
+            <div>
+              <p class="event">347</p>
+              <p class="eventText">Events</p>
+            </div>
           </div>
         </div>
       </div>
@@ -58,6 +69,13 @@ export default {
 @import '../styles/variables';
 @import '../styles/mixin';
 
+.top {
+  bottom: 30%;
+  right: 0;
+  transform: translate(0%, -50%);
+  @include top();
+}
+
 .subjects {
   width: 100%;
   height: 300px;
@@ -74,7 +92,6 @@ export default {
 .icons {
   width: calc(1200px / 6);
   margin: 3px;
-  // width: calc(95% / 6);
   height: 250px;
   background: $backgroungIcons;
   @include column();
@@ -109,18 +126,33 @@ p {
 
 .jumbotron {
   width: 95%;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
+  position: relative;
 }
 
 .jumbotron > img {
   width: 100%;
 }
 
-.mondo {
-  width: 95%;
+.w-90 {
   margin: 50px auto;
   @include justify-center();
+  @include w-90();
+}
+
+.mondo {
+  margin: 50px auto;
+  width: 100%;
+  position: relative;
+}
+
+.top {
+  bottom: 0%;
+  right: 0;
+  transform: translate(0%, 50%);
+  @include top();
 }
 
 .mappamondo {

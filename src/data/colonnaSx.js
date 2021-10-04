@@ -6,22 +6,30 @@ export default [
         titolo: "15 Days",
     },
     {
-        titolo: "v",
+        // titolo: "v",
+        current: true
     },
     {
-        titolo: "v",
+        // titolo: "v",
+        current: true
     },
     {
-        titolo: "x",
+        // titolo: "x",
+        current: false
     },
     {
-        titolo: "x",
+        // titolo: "x",
+        current: false
+
     },
     {
-        titolo: "x",
+        // titolo: "x",
+        current: false
+
     },
     {
-        titolo: "x",
+        // titolo: "x",
+        current: false
     },
     
     

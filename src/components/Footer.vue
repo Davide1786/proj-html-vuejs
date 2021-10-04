@@ -1,15 +1,19 @@
 <template>
   <footer>
     <div class="backgroundFooter">
+      <div class="top-footer">
+          <i class="fas fa-angle-up"></i>
+          top
+      </div>
       <div class="link">
         <div class="academy">
           <img src="../img/logo-light.png" alt="">
           <ul>
             <li v-for="(link, index) in linksUno" :key="index">
-              {{link.text}} <br> 
-              {{link.textUno}} <br> 
-              {{link.textDue}} <br> 
-              {{link.textTre}} 
+              <p> {{link.text}} </p>
+              <p> {{link.textUno}} </p>
+              <p> {{link.textDue}} </p>
+              <p> {{link.textTre}} </p>
             </li>
           </ul>
         </div>
@@ -17,7 +21,8 @@
           <h1>Popular courses</h1>
           <ul>
             <li v-for="(link, index) in linksDue" :key="index">
-              {{link.text}} <br> {{ link.name}} 
+              <p> {{link.text}} </p>
+              <p> {{link.name}} </p>
             </li>
           </ul>
         </div>
@@ -40,8 +45,12 @@
         </div>
         <div class="socials">
           <p>CALL +44 300 303 0266</p>
-          <p>FOLLOW US</p>
-          <div class="icone"></div>
+          <p class="follow">FOLLOW US</p>
+          <div class="icone">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -131,12 +140,19 @@ export default {
     @include align-center();
   }
 
+  .top-footer {
+    right: 0;
+    bottom: 0;
+    @include top();
+}
+
   .link {
     width: 95%;
     height: 300px;
     margin: 0 auto;
     @include display-flex();
     border-bottom: 1px solid $listFooter ;
+    
   }
 
   .academy,
@@ -150,7 +166,7 @@ export default {
 
   .academy > img {
     width: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
   }
   
   .learning > img {
@@ -168,30 +184,50 @@ export default {
     color: $listFooter;
   }
 
+  p {
+    margin: 10px 0px;
+  }
+
   .footerBottom {
     position: absolute;
     bottom: 0;
-    left: 0;
-    // transform: translate(5.5%, -0%);
-    transform: translate(3.5%, -0%);
+    left: 50%;
+    transform: translate(-50%, 0%);
     width: 95%;
-    margin: 0 auto;
     height: 100px;
     display: flex;
     color: $listFooter;
-    // background: red;
   }
 
   .copy {
     width: 50%;
     height: 100%;
-    @include align-center();
+    // @include align-center();
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    // background: lightblue;
   }
 
   .socials {
     width: 50%;
     height: 100%;
-    @include align-center();
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .follow {
+    margin: 0 20px;
+  }
+
+  .icone {
+    margin-right: 10px;
+  }
+
+  .fab {
+    font-size: 20px;
+    margin: 0px 20px;
   }
 
 

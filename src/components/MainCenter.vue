@@ -1,6 +1,10 @@
 <template>
   <section>
     <div class="jumbotron">
+      <div class="top">
+          <i class="fas fa-angle-up"></i>
+          top
+      </div>
       <div class="utente">
         <img src="../img/testimonials-standard-2.png" alt="">
       </div>
@@ -24,6 +28,7 @@
         </div>
       </div>
       <div class="articolo">
+        
         <div class="titolo">
           <h1 class="learning">Learning Possibilities</h1>
           <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus excepturi consequatur vel, amet optio temporibus nobis reiciendis? Laudantium quaerat tempora, id natus quasi possimus esse rem molestias ullam minima.
@@ -31,6 +36,7 @@
           </p>
           <ul class="lista">
             <li v-for="(link, index) in links" :key="index" class="nav">
+              <i class="fas fa-check"></i>
               {{link.titolo}}
             </li>
           </ul>
@@ -107,7 +113,14 @@ export default {
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: top, bottom ;
+  position: relative;
   @include column();
+}
+
+.top {
+  right: 0;
+  top: 103%;
+  @include top();
 }
 
 .utente {
@@ -155,7 +168,7 @@ export default {
   .info {
     width: 95%;
     height: 700px;
-    margin: 0 auto;
+    margin: 100px auto;
     display: flex;
   }
 
@@ -226,6 +239,11 @@ export default {
     position: absolute;
     bottom: 0px;
     right: 0px;
+  }
+
+  .fa-check {
+    color: $azzurro;
+    @include font15();
   }
 
 

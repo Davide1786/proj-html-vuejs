@@ -14,7 +14,10 @@
                   </ul>
               </nav>
               <div class="icone">
-                qui vanno le icone del search hamburger e valiggia
+                <i class="fas fa-search"></i>
+                <i class="far fa-clipboard"><div class="qnt"> 0 </div></i>
+                <!-- <div class="qnt">0</div> -->
+                <i class="fas fa-bars"></i>
               </div>
           </div>
           <div class="headerCenter">
@@ -104,11 +107,12 @@ export default {
     width: 95%;
     height: 100px;
     margin: 0px auto;
-    padding: 10px;
     @include display-flex();
+    @include w-90();
   }
 
   .logo {
+    text-align: start;
     width: 200px;
     @include align-center();
   }
@@ -117,12 +121,13 @@ export default {
     width: 100%;
   }
 
-  .navigazione {
-    width: 60%;
-    @include justify-content();
-  }
+  // .navigazione {
+  //   width: calc(100% - 400px);
+  //   @include justify-content();
+  // }
 
   ul, li {
+    width: 100%;
     display: flex;
     list-style: none;
     margin: 20px;
@@ -131,8 +136,35 @@ export default {
   }
 
   .icone {
-    width: 20%;
+    text-align: end;
+    width: 200px;
   }
+
+  .fas {
+    margin-right: 20px;
+    font-size: 20px;
+    color: $bianco;
+  }
+
+  .qnt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(60%, -20%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: $azzurro;
+  font-size: 12px;
+  @include justify-content();
+}
+
+.fa-clipboard {
+  position: relative;
+  margin-right: 20px;
+    font-size: 20px;
+    color: $bianco;
+}
 
  .headerCenter {
     position: absolute;

@@ -1,5 +1,63 @@
 // Impaginazione
 
+@mixin top {
+    @include column();
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: $bianco;
+    background-color: $azzurro;
+    text-transform: uppercase;
+}
+
+@mixin top-special-logo {
+    @include column();
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: $bianco;
+    background-color: $colorCarrello;
+    text-transform: uppercase;
+}
+
+@mixin top-special {
+    @include column();
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: $colorCarrello;
+    background-color: $bianco;
+    text-transform: uppercase;
+}
+
+@mixin top-loghi {
+    @include column();
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: $bianco;
+    background-color: $azzurro;
+    text-transform: uppercase;
+}
+
+@mixin top-footer {
+    @include column();
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: $bianco;
+    background-color: $azzurro;
+    text-transform: uppercase;
+}
+
+
+
+@mixin w-90 {
+    width: 90%;
+    margin: 0 auto;
+    // background: brown;
+}
+
 @mixin display-flex {
     display: flex;
     justify-content: center;

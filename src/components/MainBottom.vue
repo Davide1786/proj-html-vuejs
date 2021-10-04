@@ -18,7 +18,7 @@
                 <div :class="(img.status) ? 'active' : null" class="prezzo">
                   {{img.titolo}}
                 </div>
-                <!-- <div class="prezzo">ciao</div> -->
+              
               </div>
               <p class="nome"> {{img.nome}} </p>
               <p class="articolo"> {{img.articolo}} </p>

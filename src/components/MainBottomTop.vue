@@ -2,8 +2,30 @@
   <section>
     <div class="container">
       <div class="sfondo"></div>
+      <div class="top">
+          <i class="fas fa-angle-up"></i>
+          top
+      </div>
+      <div class="top-special">
+          <i class="fas fa-angle-up"></i>
+          top
+      </div>
+       <div class="top-special-due">
+            <i class="fas fa-angle-up"></i>
+            top
+       </div>
+       <div class="top-special-logo">
+            <img src="../img/cerchio.png" alt="">
+       </div>
+       <div class="top-special-shopping">
+            <i class="fas fa-shopping-cart"></i>
+       </div>
+       <div class="top-special-due">
+            <i class="fas fa-angle-up"></i>
+            top
+       </div>
       <div class="wrapperUno">
-        <div class="top">
+        <div class="top-alto">
           <h1>Popular Online Courses</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat libero molestiae obcaecati consequuntur laborum voluptatum, similique ipsum! Rerum ut facilis quis mollitia quasi facere illum dignissimos saepe dolorum fuga?</p>
         </div>
@@ -22,7 +44,8 @@
               </div>
               <p class="nome"> {{img.nome}} </p>
               <p class="articolo"> {{img.articolo}} </p>
-              <p class="articolo"> Programming </p>
+              <p class="articolo"><i class="fas fa-user"></i> 1 <i class="fas fa-tag"></i> Programming  </p>
+
             </div>
             <!-- <div class="icone"></div> -->
           </div>
@@ -60,7 +83,11 @@
               <div class="containerBox">
                 <div class="boxContainer">
                   <div v-for="(tab, index) in colonnaSx" :key="index" class="righe">
-                    <p class="testi"> {{tab.titolo}} </p>
+                    <p class="testi">
+                      {{tab.titolo}}
+                      <i :class="(tab.current) ? 'fas fa-check' : 'fas fa-times'"></i>
+                    </p>
+                   
                   </div>
                   <div class="righeSpecial">
                     <p class="testiSpecial">special</p>
@@ -68,7 +95,10 @@
                 </div>
                 <div class="boxContainer">
                   <div v-for="(tab, index) in colonnaCenter" :key="index" class="righe">
-                    <p class="testi"> {{tab.titolo}} </p>
+                    <p class="testi">
+                      {{tab.titolo}}
+                      <i :class="(tab.current) ? 'fas fa-check' : 'fas fa-times'"></i>
+                    </p>
                   </div>
                   <div class="righeSpecial">
                     <p class="testiSpecial">special</p>
@@ -76,7 +106,11 @@
                 </div>
                 <div class="boxContainer">
                   <div v-for="(tab, index) in colonnaDx" :key="index" class="righe">
-                    <p class="testi"> {{tab.titolo}} </p>
+                    <p class="testi">
+                      {{tab.titolo}}
+                      <i :class="(tab.current) ? 'fas fa-check' : 'fas fa-times'"></i>  
+                    </p>
+                    <!-- <i :class="(tab.current) ? 'fas fa-check' : 'fas fa-times'"></i> -->
                   </div>
                   <div class="righeSpecial">
                     <p class="testiSpecial">special</p>
@@ -89,16 +123,17 @@
       </div>
     </div>
       <div class="containerLoghi">
+        <div class="top-loghi">
+          <i class="fas fa-angle-up"></i>
+          top
+        </div>
         <div class="logotipi">
           <div v-for="(img, index) in loghi" :key="index" class="loghi">
             <img :src="require(`../img/${img.img}`)" alt="">
           </div>
-        </div>
-          
+        </div>  
       </div>
-    
-  </section>
-    
+  </section>  
 </template>
 
 <script>
@@ -131,6 +166,60 @@ export default {
 @import '../styles/variables';
 @import '../styles/mixin';
 
+.fa-check {
+  color: $azzurro;
+}
+
+.fa-times {
+ 
+}
+
+.top {
+  right: 0;
+  top: 0;
+  transform: translate(0, 50%);
+  @include top();
+}
+
+.top-special {
+  @include top();
+  top: 780px;
+  right: 0;
+  z-index: 10;
+}
+
+.top-special-due {
+  @include top();
+  top: 1500px;
+  right: 0;
+  z-index: 10;
+}
+
+.top-loghi {
+  @include top-loghi();
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.top-special-logo {
+  @include top-special-logo();
+  top: 1350px;
+  right: 0;
+  z-index: 10;
+}
+
+.top-special-logo > img {
+  width: 100%;
+}
+
+.top-special-shopping {
+  @include top-special();
+  top: 1400px;
+  right: 0;
+  z-index: 10;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -153,7 +242,7 @@ export default {
   @include column();
 }
 
-.top {
+.top-alto {
   width: 70%;
   margin: 50px auto;
   text-align: center;
@@ -219,6 +308,7 @@ p {
 }
 
 .articolo {
+  margin-bottom: 20px;
   color: $fontP;
   @include font18();
 }
@@ -295,7 +385,6 @@ p {
   font-weight: bold;
   color: $titoliColonna;
   @include font25();
-
 }
 
 .piano {
@@ -396,6 +485,8 @@ p {
 .containerLoghi {
   width: 100%;
   height: 300px;
+  position: relative;
+  // background: aquamarine;
 }
 
 .logotipi {
